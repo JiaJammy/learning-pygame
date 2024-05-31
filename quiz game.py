@@ -61,27 +61,6 @@ def ques_x(index):
     
 
     correct_ans = [C_rect,B_rect,D_rect,C_rect]
-    
-    # if correct_ans != []:
-    #     if pygame.mouse.get_pressed()[0]:
-
-    #         if play_rect.collidepoint(pygame.mouse.get_pos()):
-                
-    #             score +=4
-    #             print(score)
-    #             screen.fill('Black')
-    #             quiz_list.pop(0)
-    #             correct_ans.pop(0)
-    #             option_B_list.pop(0)
-    #             option_C_list.pop(0)
-    #             option_D_list.pop(0)
-    #             option_A_list.pop(0)
-    #             # ques_x()
-    
-
-    
-    # else:
-    #     game_active = False
               
 def game_screen():  
     screen.fill((94,129,162))
@@ -89,12 +68,6 @@ def game_screen():
     play_rect = play.get_rect(center = (450,400))
     pygame.draw.rect(screen, '#172F43', play_rect,0,5)
     screen.blit(play, play_rect)
-
-        
-        # if play_rect.collidepoint(pygame.mouse.get_pos()):
-        #     if pygame.mouse.get_pressed()[0]:
-        #         game_active = True
-
 
 game_screen()   
 while True:
@@ -116,21 +89,7 @@ while True:
                 screen.blit(bg, (0,0))
                 screen.blit(char, char_rect)
                 ques_x(index)
-                
 
-                #     score +=4
-                #     print(score)
-                #     screen.fill('Black')
-                #     quiz_list.pop(0)
-                #     correct_ans.pop(0)
-                #     option_B_list.pop(0)
-                #     option_C_list.pop(0)
-                #     option_D_list.pop(0)
-                #     option_A_list.pop(0)
-                #     ques_x()
-        # if game_active == False:
-        #     if event.type == KEYDOWN and event.key == pygame.K_SPACE:
-        #         game_active = True
     pygame.display.update()
     clock.tick(FPS)
 
